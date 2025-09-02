@@ -27,7 +27,6 @@ Përdor **Blade + AJAX** për disa ndërveprime pa reload dhe kujdeset për N+1 
 ### Bonus (të implementuara)
 - **Members / Assignees**: lidhje many-to-many `users ↔ issues` + **attach/detach me AJAX** te faqja e issue.
 
-> Shënim: Auth UI (p.sh. Breeze) **nuk është pjesë e këtij repo-je**; politikat funksionojnë sapo të aktivizosh autentikimin dhe middleware-t në app-in tënd.
 
 ---
 

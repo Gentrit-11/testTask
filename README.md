@@ -1,39 +1,42 @@
 # Mini Issue Tracker (Laravel)
 
-Mini-tracker për projekte dhe çështje (issues), me etiketa (tags) dhe komente.  
-Përdor **Blade + AJAX** për disa ndërveprime pa reload dhe kujdeset për N+1 me **eager loading**.
+Mini-tracker for projects and issues, with tags and comments.
+Uses **Blade + AJAX** for some reload-free interactions and takes care of N+1 with **eager loading**.
 
-## Çfarë përmban
+## What's included
 
 - **Projects**
-  - List / Create / Edit / Delete
-  - Project **show** me listimin e issues të atij projekti
+- List / Create / Edit / Delete
+- Project **show** with listing of issues of that project
 - **Issues**
-  - Listim me **filters** (status, priority, tag)
-  - **Search me debounce (AJAX)** gjatë shkrimit
-  - Create / Edit / Delete
-  - Issue **show**
+- Listing with **filters** (status, priority, tag)
+- **Search with debounce (AJAX)** while writing
+- Create / Edit / Delete
+- Issue **show**
 - **Tags**
-  - Create / List / Delete
-  - **Attach/Detach te një issue (AJAX, pa reload)**
+- Create / List / Delete
+- **Attach/Detach to an issue (AJAX, no reload)**
 - **Comments**
-  - Ngarkim i komenteve te issue **me AJAX** (paginated)
-  - **Shtim komenti me AJAX** (prepend + pastrim i formës)
-- **Të tjera**
-  - **Eager loading** për të shmangur N+1
-  - **Migrations, factories, seeders** për demo data
-  - **Pagination** e thjeshtë me stil të pastër në Blade
+- Loading of comments to an issue **with AJAX** (paginated)
+- **Add comment with AJAX** (prepend + form cleaning)
+- **Other**
+- **Eager loading** to avoid N+1
+- **Migrations, factories, seeders** for demo data
+- **Simple **Pagination** with clean style in Blade
 
-### Bonus (të implementuara)
-- **Members / Assignees**: lidhje many-to-many `users ↔ issues` + **attach/detach me AJAX** te faqja e issue.
+
 
 
 ---
 
 ## Setup
 
-1. **Instalimi**
-   ```bash
-   composer install
-   cp .env.example .env
-   php artisan key:generate
+1. **Installation** 
+```bash
+git clone
+cd testTask
+composer install
+cp .env.example .env
+php artisan key: generate
+php artisan migrate --seed
+php artisan serve
